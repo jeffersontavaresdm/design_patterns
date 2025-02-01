@@ -1,4 +1,4 @@
-<h1 align="center"><a href="https://codingbat.com/java">Codingbat</a> Challenges</h1>
+# DESIGN PATTERNS
 
 ### Repository designed to study and practice design patterns and improve Java skills.
 
