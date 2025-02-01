@@ -1,10 +1,6 @@
 package behavioral.strategy.provider;
 
-import behavioral.strategy.actions.AnimalActionStrategy;
-import behavioral.strategy.actions.AnimalAction;
-import behavioral.strategy.actions.AnimalJumping;
-import behavioral.strategy.actions.AnimalRunning;
-import behavioral.strategy.actions.AnimalSwimming;
+import behavioral.strategy.actions.*;
 
 import java.util.Map;
 
