@@ -10,11 +10,20 @@ import org.junit.jupiter.api.Test;
 class StrategyTest {
 
   @Test
-  void shouldCreateRunningStrategyClass() {
+  void givenRunningAction_whenGetStrategy_theReturnRunningInstanceClass() {
     StrategyProvider provider = new StrategyProvider();
 
     AnimalActionStrategy strategy = provider.getStrategy(AnimalAction.ACTION_01.getAction());
 
     Assertions.assertEquals(AnimalRunning.class, strategy.getClass());
+  }
+
+  @Test
+  void givenInvalidAction_whenGetStrategy_thenReturnDefaultStrategy() {
+    StrategyProvider provider = new StrategyProvider();
+
+    AnimalActionStrategy strategy = provider.getStrategy("INVALID_ACTION");
+
+    Assertions.assertNotEquals(AnimalRunning.class, strategy.getClass());
   }
 }
