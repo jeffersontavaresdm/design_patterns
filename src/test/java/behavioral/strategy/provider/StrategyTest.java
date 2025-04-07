@@ -17,4 +17,13 @@ class StrategyTest {
 
     Assertions.assertEquals(AnimalRunning.class, strategy.getClass());
   }
+
+  @Test
+  void givenInvalidAction_whenGetStrategy_thenReturnDefaultStrategy() {
+    StrategyProvider provider = new StrategyProvider();
+
+    AnimalActionStrategy strategy = provider.getStrategy("INVALID_ACTION");
+
+    Assertions.assertNotEquals(AnimalRunning.class, strategy.getClass());
+  }
 }
